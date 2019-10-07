@@ -1,0 +1,26 @@
+<?php
+$con=mysqli_connect("localhost", "root", "", "deva1");
+$sql = "SELECT * from registration";
+$result = mysqli_query($con, $sql);
+echo "<table border='2'>";
+echo "<tr><th>UderId</th><th>Name</th><th>State</th><th>City</th><th>Phone No</th><th>Pin</th><th>Gender</th></tr>";
+while($contact = mysqli_fetch_array($result)) 
+{ 
+echo "<tr><td>";
+echo $contact['UserId'];
+echo "</td><td>";
+echo $contact['UserName'];
+echo "</td><td>";
+echo $contact['State'];
+echo "</td><td>";
+echo $contact['City'];
+echo "</td><td>";
+echo $contact['PhoneNo'];
+echo "</td><td>";
+echo $contact['Pin'];
+echo "</td><td>";
+echo $contact['Gender'];
+echo "</td></tr>";
+} 
+echo "</table>";
+?>

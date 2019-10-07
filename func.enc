@@ -1,0 +1,25 @@
+<html>
+<head>
+	<title>parameter addition and substraction example</title>
+</head>
+<body>
+<?php
+	//adding two num
+	function add($x, $y)
+	{
+		$sum = $x + $y;
+		echo "$sum <br><br>";
+	}
+	add(467, 943);
+	
+	//substraction
+	function sub($x, $y)
+	{
+		$diff = $x - $y;
+		echo "$diff <br><br>";	
+	}
+	sub(943, 467);
+
+?>
+</body>	
+</html>

@@ -1,0 +1,11 @@
+<?php
+$alpha = range('A','E');
+for($i=0;$i<5;$i++)
+{
+	for($j=4;$j>0;$j--)
+	{
+		echo $alpha[$j];
+	}
+	echo "<br>";
+}
+?>

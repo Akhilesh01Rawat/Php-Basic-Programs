@@ -1,0 +1,28 @@
+<?php
+$con=mysqli_connect("localhost", "root", "", "deva1");
+//require_once "Config.php";
+if(isset($_POST['submit']))
+{
+$userid=$_POST['userid'];
+$username=$_POST['username'];
+$state=$_POST['state'];
+$city=$_POST['city'];
+$phoneno=$_POST['phoneno'];
+$pin=$_POST['pin'];
+$gender=$_POST['gender'];
+
+$sql = "INSERT INTO registration (UserId,UserName,State,City,PhoneNo,Pin,Gender)
+VALUES('$userid','$username','$state','$city','$phoneno','$pin','$gender')";
+$result = mysqli_query($con, $sql);
+//while($contact = mysql_fetch_assoc($result))
+if($result===true) 
+{
+    echo "New record created successfully";
+} 
+else 
+{
+    echo "Error: " .$sql. "<br>" .$con->error;
+}
+}
+mysqli_close($con);
+?>
